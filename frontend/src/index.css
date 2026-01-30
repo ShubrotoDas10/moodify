@@ -1,0 +1,399 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Moodify DBZ Design System - All colors in HSL */
+
+@layer base {
+  :root {
+    /* DBZ Core Colors */
+    --dbz-orange: 22 100% 55%;
+    --dbz-blue: 210 100% 40%;
+    --dbz-gold: 51 100% 50%;
+    --dbz-silver: 0 0% 75%;
+    --dbz-energy: 180 100% 50%;
+    --dbz-red: 0 84% 60%;
+    --dbz-purple: 270 70% 60%;
+    
+    /* Space Background */
+    --background: 240 30% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 25% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 25% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 22 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 100% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 20% 25%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 240 30% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 20% 30%;
+    --input: 240 20% 25%;
+    --ring: 22 100% 55%;
+
+    --radius: 0.75rem;
+
+    /* Emotion Colors */
+    --emotion-happy: 142 76% 56%;
+    --emotion-sad: 217 91% 60%;
+    --emotion-angry: 0 84% 60%;
+    --emotion-fear: 270 70% 60%;
+    --emotion-surprise: 51 100% 50%;
+    --emotion-neutral: 220 14% 62%;
+    --emotion-disgust: 280 60% 50%;
+
+    /* Sidebar */
+    --sidebar-background: 240 25% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 22 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 20% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 20% 25%;
+    --sidebar-ring: 22 100% 55%;
+  }
+
+  .dark {
+    --background: 240 30% 11%;
+    --foreground: 0 0% 100%;
+    --card: 240 25% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 25% 15%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 22 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 100% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 20% 25%;
+    --muted-foreground: 220 15% 65%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 240 30% 11%;
+    --destructive: 0 62% 31%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 20% 30%;
+    --input: 240 20% 25%;
+    --ring: 22 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: 
+      radial-gradient(ellipse at top, hsl(240 30% 15%) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, hsl(270 50% 10% / 0.3) 0%, transparent 30%),
+      radial-gradient(circle at 80% 20%, hsl(210 50% 15% / 0.3) 0%, transparent 30%);
+    min-height: 100vh;
+  }
+}
+
+/* Stars Background */
+@layer utilities {
+  .stars-bg {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(0 0% 100% / 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(0 0% 100% / 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(0 0% 100% / 0.4), transparent),
+      radial-gradient(2px 2px at 160px 120px, hsl(0 0% 100% / 0.3), transparent),
+      radial-gradient(1px 1px at 230px 80px, hsl(0 0% 100% / 0.2), transparent),
+      radial-gradient(2px 2px at 300px 150px, hsl(0 0% 100% / 0.3), transparent),
+      radial-gradient(1px 1px at 400px 60px, hsl(0 0% 100% / 0.4), transparent),
+      radial-gradient(2px 2px at 500px 200px, hsl(0 0% 100% / 0.2), transparent);
+    background-size: 550px 250px;
+    animation: twinkle 8s ease-in-out infinite;
+  }
+}
+
+/* Aura Effects */
+@layer utilities {
+  .aura-gold {
+    box-shadow: 
+      0 0 30px hsl(51 100% 50% / 0.6),
+      0 0 60px hsl(51 100% 50% / 0.4),
+      0 0 100px hsl(51 100% 50% / 0.2);
+    animation: aura-pulse-gold 1.5s ease-in-out infinite;
+  }
+
+  .aura-silver {
+    box-shadow: 
+      0 0 30px hsl(0 0% 75% / 0.6),
+      0 0 60px hsl(210 50% 80% / 0.4),
+      0 0 100px hsl(270 30% 80% / 0.2);
+    animation: aura-pulse-silver 2s ease-in-out infinite;
+  }
+
+  .aura-energy {
+    box-shadow: 
+      0 0 20px hsl(180 100% 50% / 0.5),
+      0 0 40px hsl(180 100% 50% / 0.3);
+    animation: aura-pulse-energy 1s ease-in-out infinite;
+  }
+
+  .aura-angry {
+    box-shadow: 
+      0 0 30px hsl(0 84% 60% / 0.6),
+      0 0 60px hsl(22 100% 55% / 0.4),
+      0 0 100px hsl(0 84% 60% / 0.2);
+    animation: aura-pulse-angry 0.8s ease-in-out infinite;
+  }
+}
+
+/* Recording Indicator */
+@layer utilities {
+  .recording-pulse {
+    animation: recording-pulse 1.5s ease-in-out infinite;
+  }
+
+  .recording-active {
+    animation: recording-active 0.5s ease-in-out infinite;
+  }
+}
+
+/* Waveform Bars */
+@layer utilities {
+  .waveform-bar {
+    animation: waveform 0.5s ease-in-out infinite;
+  }
+}
+
+/* Character Transitions */
+@layer utilities {
+  .character-transition {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .character-power-up {
+    animation: power-up 1s ease-out;
+  }
+
+  .character-idle {
+    animation: idle-breathe 3s ease-in-out infinite;
+  }
+
+  .character-sad {
+    animation: sad-sway 4s ease-in-out infinite;
+    filter: saturate(0.7) brightness(0.9);
+  }
+}
+
+/* Particle Effects */
+@layer utilities {
+  .particles-gold {
+    background-image: 
+      radial-gradient(circle, hsl(51 100% 60%) 1px, transparent 1px),
+      radial-gradient(circle, hsl(51 100% 70%) 1px, transparent 1px);
+    background-size: 30px 30px, 50px 50px;
+    animation: particles-rise 3s linear infinite;
+  }
+
+  .particles-silver {
+    background-image: 
+      radial-gradient(circle, hsl(210 50% 80%) 1px, transparent 1px),
+      radial-gradient(circle, hsl(270 30% 85%) 1px, transparent 1px);
+    background-size: 25px 25px, 40px 40px;
+    animation: particles-float 4s ease-in-out infinite;
+  }
+}
+
+/* Message Bubbles */
+@layer utilities {
+  .bubble-user {
+    background: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(210 100% 35%) 100%);
+    border-radius: 1rem 1rem 0.25rem 1rem;
+  }
+
+  .bubble-assistant {
+    background: linear-gradient(135deg, hsl(240 25% 20%) 0%, hsl(240 25% 15%) 100%);
+    border-radius: 1rem 1rem 1rem 0.25rem;
+    border: 1px solid hsl(240 20% 30%);
+  }
+}
+
+/* Keyframes */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes aura-pulse-gold {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px hsl(51 100% 50% / 0.6),
+      0 0 60px hsl(51 100% 50% / 0.4),
+      0 0 100px hsl(51 100% 50% / 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 50px hsl(51 100% 50% / 0.8),
+      0 0 80px hsl(51 100% 50% / 0.5),
+      0 0 120px hsl(51 100% 50% / 0.3);
+  }
+}
+
+@keyframes aura-pulse-silver {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px hsl(0 0% 75% / 0.5),
+      0 0 60px hsl(210 50% 80% / 0.3),
+      0 0 100px hsl(270 30% 80% / 0.15);
+  }
+  50% { 
+    box-shadow: 
+      0 0 50px hsl(0 0% 85% / 0.6),
+      0 0 80px hsl(210 50% 85% / 0.4),
+      0 0 120px hsl(270 30% 85% / 0.2);
+  }
+}
+
+@keyframes aura-pulse-energy {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px hsl(180 100% 50% / 0.5),
+      0 0 40px hsl(180 100% 50% / 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px hsl(180 100% 60% / 0.7),
+      0 0 60px hsl(180 100% 50% / 0.4);
+  }
+}
+
+@keyframes aura-pulse-angry {
+  0%, 100% { 
+    box-shadow: 
+      0 0 30px hsl(0 84% 60% / 0.6),
+      0 0 60px hsl(22 100% 55% / 0.4);
+  }
+  50% { 
+    box-shadow: 
+      0 0 50px hsl(0 84% 70% / 0.8),
+      0 0 80px hsl(22 100% 60% / 0.5);
+  }
+}
+
+@keyframes recording-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes recording-active {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 0 hsl(0 84% 60% / 0.7);
+  }
+  50% { 
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px hsl(0 84% 60% / 0);
+  }
+}
+
+@keyframes waveform {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes power-up {
+  0% { 
+    transform: scale(0.9);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.1);
+    filter: brightness(1.5);
+  }
+  100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes idle-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes sad-sway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-3px) rotate(-1deg); }
+  75% { transform: translateX(3px) rotate(1deg); }
+}
+
+@keyframes particles-rise {
+  0% { 
+    background-position: 0 0, 0 0;
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { 
+    background-position: 0 -200px, 0 -200px;
+    opacity: 0;
+  }
+}
+
+@keyframes particles-float {
+  0%, 100% { 
+    background-position: 0 0, 10px 10px;
+    opacity: 0.5;
+  }
+  50% { 
+    background-position: 5px -20px, 15px -10px;
+    opacity: 1;
+  }
+}
+
+@keyframes countdown-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Typing Indicator */
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-4px); }
+}
+
+.typing-dot-1 { animation: typing-dot 1.4s ease-in-out infinite; }
+.typing-dot-2 { animation: typing-dot 1.4s ease-in-out 0.2s infinite; }
+.typing-dot-3 { animation: typing-dot 1.4s ease-in-out 0.4s infinite; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(240 25% 15%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(22 100% 55% / 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(22 100% 55% / 0.7);
+}

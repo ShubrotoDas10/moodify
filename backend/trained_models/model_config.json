@@ -1,0 +1,34 @@
+{
+  "model_name": "CNN Face Emotion Recognition",
+  "architecture": "EmotionCNN",
+  "input_size": [1, 1, 48, 48],
+  "output_classes": 7,
+  "emotion_labels": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "sad",
+    "surprise",
+    "neutral"
+  ],
+  "training_dataset": "FER2013",
+  "training_date": "2024-01-XX",
+  "accuracy": {
+    "train": 0.XX,
+    "validation": 0.XX,
+    "test": 0.XX
+  },
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "epochs": 50,
+    "optimizer": "Adam"
+  },
+  "preprocessing": {
+    "input_format": "grayscale",
+    "normalization": "0-1",
+    "resize": [48, 48]
+  },
+  "notes": "Place your trained model file (cnn_face_emotion.pth) in this directory"
+}
