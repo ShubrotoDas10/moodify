@@ -7,8 +7,6 @@
 
 **Moodify** is a Dragon Ball Z themed voice chatbot that detects emotions from your voice and responds with mood-appropriate conversations. Talk to an AI that understands how you're feeling and adapts its responses accordingly!
 
-![Demo](https://your-demo-gif-url.gif) <!-- Add a demo GIF here -->
-
 ## ✨ Features
 
 🎤 **Voice Emotion Detection** - Detects 7 emotions from audio using state-of-the-art ML models
@@ -27,11 +25,6 @@
 💬 **Conversation Memory** - Maintains context across the conversation
 
 😊 **Graceful Degradation** - Works with audio-only; face detection optional
-
-## 🎮 Live Demo
-
-**Frontend:** [https://moodify-demo.vercel.app](https://your-deployed-frontend-url)  
-**API Docs:** [http://localhost:8000/docs](http://localhost:8000/docs) (when running locally)
 
 ## 🏗️ Architecture
 
@@ -357,7 +350,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Shubroto Das**
 - GitHub: [@ShubrotoDas10](https://github.com/ShubrotoDas10)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 
 ## 🙏 Acknowledgments
 
